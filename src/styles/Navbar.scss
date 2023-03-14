@@ -1,0 +1,206 @@
+@import './variables';
+
+.navbar {
+    font-family: $inter;
+    display: flex;
+    position: fixed; 
+}
+
+// **************************
+// Sidebar
+// **************************
+
+.leftColumn {
+
+    width: 63px;
+    height: 1024px;
+    padding: 12px 7.5px;
+    gap:10px;
+
+    background-color: $background-color;
+    border-right: $grayBorder;
+    position: relative;
+
+    .top{
+        top:12px;
+        left:7.5px;
+         .navlogo{
+             width: 48px;
+             height: 64px;
+             border-radius: 8px;
+        }
+        .summitIcon{
+            width: 48px;
+            height: 44px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.bottom{ 
+    height: 48px;
+    width: 40px; 
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;        
+          
+    .user{
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        left: 15px;
+        top: 4px;
+        background: #444444;
+        border-radius: 100px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+    }
+}
+a {
+    display: block;
+    text-align: center;
+}
+
+// **************************
+// NavBar
+// **************************
+
+
+.rightColumn  {
+    position: relative;  
+    left: 12px;         
+    padding: 12px 8px;
+    border-right: $grayBorder;
+    width: 215px;
+        .navFrame{
+            position: relative; 
+            top:10px;
+        }
+        .rainFocusSummit{
+            width: 125px;
+            height: 19px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            color: $mainColor;
+        }
+        .locationDate{
+            text-align: left;
+            color: $mainColor;
+            width: 199px;
+            height: 31px;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 18px;
+        }
+        .eventSearch{
+            position: relative;
+            bottom: 10px;
+            .search{
+                    border: none;
+                    background-size: 10px;
+                    border-radius: 4px;
+                    background-color: #F5F5F5;
+                    background-image: url('../images/search.png');
+                    background-position: 6px 10px; 
+                    background-repeat: no-repeat;
+                    background-size: 14px 14px;
+                    padding: 10px;
+                    padding-left: 28px;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 10px;
+                    width: 80%;
+            }
+
+        }
+}
+
+h1 {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+.dot {
+    width: 24px;
+    height: 24px;
+    margin: 2px;
+    border-radius: 15px;
+}
+
+.toggleOff .dot {
+    background-color: $gray;
+}
+
+.toggleOn .dot {
+    background-color: $purple;
+}
+
+.toggleOff {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 12px;
+    color: $gray;
+    line-height: 18px;
+    height: 30px;
+    border-radius: 8px;
+    //alightment
+    padding: 8px 12px;
+    position:relative;
+    right:10px;
+}
+.toggleOff:hover{
+    background: $light-purple;
+    cursor: pointer;
+}
+
+.toggleOn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 12px;
+    color: $purple;
+    height: 30px;
+    background: $light-purple;
+    border-radius: 8px;
+
+    //alighment
+    padding: 8px 12px;
+    position:relative;
+    right:10px;
+}
+
+.sub-menu {
+    margin-left: 40px;
+    color: $gray;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sub-menu p:hover {
+    cursor: pointer;
+    color: $purple;
+}
+
+  @media screen and (max-width: 700px) {
+    .navbar{
+        display: none;
+    }
+  }

@@ -1,0 +1,150 @@
+@import './variables';
+
+
+.attendees{
+    font-family: $inter;
+    padding: 15px;
+    margin-top:-23px;
+    
+        .stepTitle{
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .flex-container {
+            background-color: $boxBackgroundColor;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 1px 30px;
+            border-radius: 4px;
+            border: $grayBorder;
+
+            .boxTitle{
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 16px;
+            color: $black;
+            }
+            .box{
+                padding: 8px;
+            }
+            .box1{
+                margin-right:20px;
+            }
+            .box2{
+                width: 221px;
+            }
+            .details{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                color: $black;
+            }
+          }
+    .grid-container {
+        
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 24px; 
+        grid-row-gap: 10px;
+
+        p{
+            margin-left: 20px;
+        }
+     
+        .workflowTitle{
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 16px;
+            color:$black;
+        }
+        .arrow{
+            position: relative;
+            top:3px;
+            width:15px;
+            height: 17px;
+            margin-right:10px;
+        }
+        .portal{
+            position: relative;
+            top:3px;
+            width:24px;
+            height: 16px;
+            margin-right:10px;
+
+        }
+        .workflowDetails{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        .addItem{
+            text-align: center;
+            p{
+                color:$black;
+                margin-right: 18px;
+            }
+        }
+        .item p{
+            position: relative; //omit all if 3 box in a row
+            right:10px;
+        }
+        
+        
+    }
+     
+    .grid-container > div {
+        border-radius: 5px;
+        background-color: white;
+        text-align: left;
+        padding: 24px 32px; 
+        border: $grayBorder;
+        // max-width:  220px; //size, if 3 box in a row, addjust padding to 20px
+        // max-height: 122px; 
+        max-width: 341.67px; //box size from figma, two in a row work best
+        max-height: 122px;   //box size from figma  //adjust padding to 24px 32px
+        //text
+        font-family: $inter;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        color: $black;
+
+    }
+}
+
+.heading {
+    display:flex;
+    margin-top: 24px;
+    padding: 0px;
+    gap: 24px;
+    width: 1073px;
+    height: 35px;
+
+    .title{
+        position: relative;
+        bottom:15px;
+        font-weight: 600;
+        font-size: 20px;
+        color: $mainColor;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .attendees{
+        .flex-container {
+            flex-direction: column;
+    }
+    .grid-container{
+        display: block;
+        div {
+            margin-bottom: 20px;
+        }
+    }
+    
+  }
+
+}
+       

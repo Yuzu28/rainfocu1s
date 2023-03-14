@@ -1,0 +1,21 @@
+.App{
+    display: flex;
+
+    .content{
+        padding: 40px 48px;
+        margin-left:300px; 
+        gap: 40px;
+        height: 1024px;
+        overflow-x: hidden !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .App
+        .content{
+            margin-left:0px; 
+        }
+  }
+
+
+
